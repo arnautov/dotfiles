@@ -49,10 +49,8 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/arnautov/git-tf:/usr/local/zend/bin:/usr/local/zend/mysql/bin:/usr/local/go/bin:/Applications/Postgres.app/Contents/Versions/9.4/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/zend/bin:/usr/local/zend/mysql/bin:/Applications/Postgres.app/Contents/Versions/9.4/bin:/Users/arnautov/git-tf"
 # export MANPATH="/usr/local/man:$MANPATH"
-
-export GOPATH="/Users/arnautov/gocode"
 
 source $ZSH/oh-my-zsh.sh
 

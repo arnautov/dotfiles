@@ -11,14 +11,16 @@
 
 ######## Recent display filters (latest last), cannot be altered through command line ########
 
+recent.display_filter: udp.stream eq 10
+recent.display_filter: tcp.stream eq 0
 recent.display_filter: ppp
 
 # Main window geometry.
 # Decimal numbers.
 gui.geometry_main_x: 0
-gui.geometry_main_y: 23
+gui.geometry_main_y: 0
 gui.geometry_main_width: 1440
-gui.geometry_main_height: 793
+gui.geometry_main_height: 900
 
 # Main window maximized.
 # TRUE or FALSE (case-insensitive).

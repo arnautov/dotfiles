@@ -243,11 +243,11 @@ gui.filter_expressions.expr: ppp
 
 # Default capture device
 # A string
-capture.device: Wi-Fi: en0
+capture.device: utun0
 
 # Interface link-layer header types (Ex: en0(1),en1(143),...)
 # A string
-capture.devices_linktypes: en0(1),awdl0(1),bridge0(1),utun0(0),en1(1),en2(1),p2p0(12),lo0(0)
+capture.devices_linktypes: gif0(0),en0(1),awdl0(1),bridge0(1),utun0(0),en1(1),en2(1),p2p0(12),lo0(0)
 
 # Interface descriptions (Ex: eth0(eth0 descr),eth1(eth1 descr),...)
 # A string
@@ -263,23 +263,23 @@ capture.devices_linktypes: en0(1),awdl0(1),bridge0(1),utun0(0),en1(1),en2(1),p2p
 
 # Interface buffer size (Ex: en0(1),en1(143),...)
 # A string
-capture.devices_buffersize: en0(2),awdl0(2),bridge0(2),utun0(2),en1(2),en2(2),p2p0(2),lo0(2)
+capture.devices_buffersize: gif0(2),en0(2),awdl0(2),bridge0(2),utun0(2),en1(2),en2(2),p2p0(2),lo0(2)
 
 # Interface snap length (Ex: en0(65535),en1(1430),...)
 # A string
-capture.devices_snaplen: en0:0(262144),awdl0:0(262144),bridge0:0(262144),utun0:0(262144),en1:0(262144),en2:0(262144),p2p0:0(262144),lo0:0(262144)
+capture.devices_snaplen: gif0:0(262144),en0:0(262144),awdl0:0(262144),bridge0:0(262144),utun0:0(262144),en1:0(262144),en2:0(262144),p2p0:0(262144),lo0:0(262144)
 
 # Interface promiscuous mode (Ex: en0(0),en1(1),...)
 # A string
-capture.devices_pmode: en0(0),awdl0(0),bridge0(0),utun0(0),en1(0),en2(0),p2p0(0),lo0(0)
+capture.devices_pmode: gif0(1),en0(1),awdl0(0),bridge0(0),utun0(0),en1(0),en2(0),p2p0(0),lo0(0)
 
 # Capture in promiscuous mode?
 # TRUE or FALSE (case-insensitive)
-capture.prom_mode: FALSE
+#capture.prom_mode: TRUE
 
 # Interface capture filter (Ex: en0(tcp),en1(udp),...)
 # A string
-capture.devices_filter: en0(),awdl0(),bridge0(),utun0(),en1(),en2(),p2p0(),lo0()
+capture.devices_filter: bridge0(),utun0(),en1(),en2(),p2p0(),lo0()
 
 # Capture in Pcap-NG format?
 # TRUE or FALSE (case-insensitive)
@@ -295,7 +295,7 @@ capture.devices_filter: en0(),awdl0(),bridge0(),utun0(),en1(),en2(),p2p0(),lo0()
 
 # Show capture info dialog while capturing?
 # TRUE or FALSE (case-insensitive)
-#capture.show_info: FALSE
+capture.show_info: TRUE
 
 # Column list
 # List of columns to be displayed in the capture options dialog.
@@ -1532,6 +1532,10 @@ capture.devices_filter: en0(),awdl0(),bridge0(),utun0(),en1(),en2(),p2p0(),lo0()
 # 
 # A path to a file
 #dtls.debug_file: 
+
+# Semicolon-separated list of private RSA keys used for DTLS decryption. Used by versions of Wireshark prior to 1.6
+# A string
+#dtls.keys_list: 
 
 # Pre-Shared-Key as HEX string, should be 0 to 16 bytes
 # A string
@@ -4470,6 +4474,10 @@ capture.devices_filter: en0(),awdl0(),bridge0(),utun0(),en1(),en2(),p2p0(),lo0()
 # 
 # A path to a file
 #ssl.debug_file: 
+
+# Semicolon-separated list of private RSA keys used for SSL decryption. Used by versions of Wireshark prior to 1.6
+# A string
+#ssl.keys_list: 
 
 # Whether the SSL dissector should reassemble SSL records spanning multiple TCP segments. To use this option, you must also enable "Allow subdissectors to reassemble TCP streams" in the TCP protocol settings.
 # TRUE or FALSE (case-insensitive)
